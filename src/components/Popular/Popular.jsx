@@ -1,6 +1,8 @@
 import "./popular.scss";
-import bali from "../../assets/Image/Bali.jpg";
-import Img2 from "../../assets/Image/Hero.jpg";
+import Img2 from "../../assets/Image/doha2.jpg";
+import Img3 from "../../assets/Image/srilanka3.jpg";
+import Img4 from "../../assets/Image/thailand3.jpg";
+import Img5 from "../../assets/Image/vietnam3.jpg";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
@@ -9,31 +11,31 @@ const Popular = () => {
   const Data = [
     {
       id: 1,
-      imgSrc: Img2,
-      destTitle: "Machu Picchu",
-      location: "Peru",
-      grade: "CULTURAL RELAX",
+      imgSrc: Img3,
+      destTitle: "Shri-Lanka",
+      location: "Colombo",
+      grade: "Cultural Relax",
     },
     {
       id: 2,
-      imgSrc: Img2,
-      destTitle: "Machu Picchu",
-      location: "Maldives",
-      grade: "CULTURAL RELAX",
+      imgSrc: Img4,
+      destTitle: "Thailand",
+      location: "Puket",
+      grade: "Cultural Relax",
     },
     {
       id: 3,
       imgSrc: Img2,
-      destTitle: "Machu Picchu",
-      location: "Doha",
-      grade: "CULTURAL RELAX",
+      destTitle: "Doha",
+      location: "Qatar",
+      grade: "Cultural Relax",
     },
     {
       id: 4,
-      imgSrc: Img2,
-      destTitle: "Machu Picchu",
-      location: "Italy",
-      grade: "CULTURAL RELAX",
+      imgSrc: Img5,
+      destTitle: "Hanoi",
+      location: "Vietnam",
+      grade: "Cultural Relax",
     },
   ];
 
@@ -44,10 +46,12 @@ const Popular = () => {
           <div className="textDiv">
             <h2 className="secTitle">Popular Destinations</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-              repudiandae id blanditiis provident libero voluptatum aperiam
-              fugiat sapiente illo enim quae quod, quidem ut nisi unde quam,
-              consequuntur molestias iste.
+              From the stunning beaches of Sri Lanka to the modern skyline of
+              Doha, popular travel destinations offer endless adventure and
+              beauty. Explore the rich history of Istanbul, the serene temples
+              of Bali, or the vibrant markets of Dubai. Whether seeking
+              relaxation or cultural immersion, these top destinations promise
+              unforgettable experiences for travelers from Azerbaijan.
             </p>
           </div>
           <div className="iconsDiv flex">
@@ -57,7 +61,7 @@ const Popular = () => {
         </div>
 
         <div className="mainContent grid">
-          {Data.map(({id, imgSrc, destTitle, location, grade}) => {
+          {Data.map(({ id, imgSrc, destTitle, location, grade }) => {
             return (
               <div className="singleDestination" id={id}>
                 <div className="destImage">
@@ -86,7 +90,6 @@ const Popular = () => {
               </div>
             );
           })}
-
         </div>
       </div>
     </section>

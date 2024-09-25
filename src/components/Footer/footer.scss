@@ -5,13 +5,13 @@
   --blackColor: hsl(0, 0%, 18%);
   --textColor: hsl(240, 1%, 48%);
   --whiteColorDeam: hsl(0, 0%, 93%);
-  --greyBg: hsla(0, 3%, 93%, 0.881);
+  --greyBg: hsla(0, 1%, 56%, 0.795);
   --inputColor: hsl(330, 12%, 97%);
   --greyText: rgb(190, 190, 190);
 }
 
 .footer {
-  background: var(--greyBg);
+  background: hsla(0, 3%, 93%, 0.881);
   padding: 2rem 0;
 
   .secContainer {
@@ -28,6 +28,9 @@
       gap: 0.5rem;
       margin: auto;
       justify-content: center;
+      a{
+        color: black;
+      }
 
       .icon {
         font-size: 30px;

@@ -69,7 +69,7 @@ li {
   color: var(--whiteColor);
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--HoverColor);
 }
 .secIntro {
@@ -101,7 +101,8 @@ input {
 }
 
 @media screen and (min-width: 556px) {
-  .mainContent, .singlePost {
+  .mainContent,
+  .singlePost {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -111,8 +112,28 @@ input {
   }
 }
 @media screen and (min-width: 1240px) {
-  .container{
+  .container {
     width: 80% !important;
     margin: auto !important;
+  }
+  .section {
+    padding: 5rem 0 3rem;
+  }
+  .secIntro {
+    margin: 0 auto 3rem;
+  }
+  .secIntro .secTitle {
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+  .secIntro p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
   }
 }

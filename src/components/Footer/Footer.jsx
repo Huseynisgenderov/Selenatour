@@ -17,10 +17,18 @@ const Footer = () => {
           </div>
 
           <div className="socials flex">
-            <FaFacebook className="icon" />
-            <FaInstagram className="icon" />
-            <FaWhatsapp className="icon" />
-            <FaTiktok className="icon"/>
+            <a href="https://www.facebook.com/selenatour.az/">
+              <FaFacebook className="icon" />
+            </a>
+            <a href="https://www.instagram.com/selenatour_baku/">
+              <FaInstagram className="icon" />
+            </a>
+            <a href="https://wa.me/+994774171015">
+              <FaWhatsapp className="icon" />
+            </a>
+            <a href="https://www.tiktok.com/@selenatour_baku">
+              <FaTiktok className="icon" />
+            </a>
           </div>
         </div>
 
@@ -43,16 +51,16 @@ const Footer = () => {
         <div className="footerLinks">
           <span>Contacts Us</span>
           <span className="phone">
-            Phone: <a href="#">+994774171015</a>
+            Phone: <a href="https://wa.me/+994774171015">+994774171015</a>
           </span>
           <span className="phone">
-            Phone: <a href="#">+994555111015</a>
+            Phone: <a href="https://wa.me/+994555111015">+994555111015</a>
           </span>
           <span className="phone">
-            Phone: <a href="#">+994774751015</a>
+            Phone: <a href="https://wa.me/+994774751015">+994774751015</a>
           </span>
           <span className="phone">
-            Email: <a href="#">info@selenatour.az</a>
+            Email: <a href="mailto:info@selenatour.az">info@selenatour.az</a>
           </span>
         </div>
       </div>
