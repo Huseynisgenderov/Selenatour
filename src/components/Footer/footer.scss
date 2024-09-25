@@ -1,0 +1,105 @@
+:root {
+  --PrimaryColor: hsl(44, 93%, 50%);
+  --HoverColor: hsl(44, 87%, 35%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsla(0, 3%, 93%, 0.881);
+  --inputColor: hsl(330, 12%, 97%);
+  --greyText: rgb(190, 190, 190);
+}
+
+.footer {
+  background: var(--greyBg);
+  padding: 2rem 0;
+
+  .secContainer {
+    gap: 1.5rem;
+    text-align: center;
+    .footerLogo {
+      padding-bottom: 0.5rem;
+      a {
+        cursor: pointer;
+        color: var(--PrimaryColor);
+      }
+    }
+    .socials {
+      gap: 0.5rem;
+      margin: auto;
+      justify-content: center;
+
+      .icon {
+        font-size: 30px;
+        background-color: var(--PrimaryColor);
+        border-radius: 50%;
+        padding: 5px;
+
+        &:hover {
+          background-color: var(--blackColor);
+          color: var(--PrimaryColor);
+        }
+      }
+    }
+
+    .footerLinks {
+      display: grid;
+      row-gap: 0.2rem;
+
+      .linkTitle {
+        padding-bottom: 0.5rem;
+        color: var(--blackColor);
+        font-weight: 700;
+      }
+
+      li {
+        &:hover {
+          transform: translateX(10px);
+          a {
+            color: var(--PrimaryColor);
+          }
+        }
+      }
+
+      a,
+      .phone,
+      .email {
+        color: var(--textColor);
+        font-size: 15px;
+        font-weight: 500;
+        &:hover {
+          transform: scale(1.1);
+          color: var(--PrimaryColor);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 448px) {
+  .footer {
+    .secContainer {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+      align-items: flex-start;
+    }
+
+    .footerLinks {
+      justify-content: center;
+    }
+  }
+}
+@media screen and (min-width: 640px) {
+  .footer {
+    .secContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer {
+    .secContainer {
+      padding: 2rem;
+    }
+  }
+}
