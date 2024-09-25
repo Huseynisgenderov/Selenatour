@@ -6,7 +6,7 @@ import Destinations from "./pages/Destinations/Destinations";
 import Contact from "./pages/Contact Us/Contact";
 import Blog from "./pages/Blog/Blog";
 //css
-import "./app.css";
+import "./pages/Services/app.css";
 
 function App() {
   return (
