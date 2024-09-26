@@ -30,7 +30,7 @@ window.addEventListener('scroll', addBg)
       <div className={transparant}>
 
         <div className="logoDiv">
-          <a href="#" className="logo">
+          <a href="/home" className="logo">
             <h1 className="flex">
               <MdTravelExplore className="icon" />
               SelenaTour 
@@ -41,41 +41,41 @@ window.addEventListener('scroll', addBg)
         <div className={active}>
           <ul className="navList flex">
             <li className="navItem">
-              <a href="#" className="navLink">
+              <a href="/home" className="navLink">
                 Home
               </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <a href="/home" className="navLink">
                 About Us
               </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <a href="/home" className="navLink">
                 Tours
               </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <a href="/home" className="navLink">
                 Blog
               </a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <a href="/home" className="navLink">
                 Contact
               </a>
             </li>
 
             <div className="headerBtns flex">
               <button className="btn loginBtn">
-                <a href="#">Login</a>
+                <a href="/home">Login</a>
               </button>
               <button className="btn">
-                <a href="#">Sign Up</a>
+                <a href="/home">Sign Up</a>
               </button>
             </div>
           </ul>

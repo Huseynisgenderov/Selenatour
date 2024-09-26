@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="secContainer container grid">
         <div className="logoDiv">
           <div className="footerLogo">
-            <a href="#" className="logo ">
+            <a href="/home" className="logo ">
               <h1>Selena Tour</h1>
             </a>
           </div>
@@ -35,16 +35,16 @@ const Footer = () => {
         <div className="footerLinks">
           <span>Helpful Links</span>
           <li>
-            <a href="#">Destinations</a>
+            <a href="/home">Destinations</a>
           </li>
           <li>
-            <a href="#">Support</a>
+            <a href="/home">Support</a>
           </li>
           <li>
-            <a href="#">Tickets</a>
+            <a href="/home">Tickets</a>
           </li>
           <li>
-            <a href="#">Tours</a>
+            <a href="/home">Tours</a>
           </li>
         </div>
 
