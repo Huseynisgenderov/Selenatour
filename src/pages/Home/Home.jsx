@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 
 const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1500 });
+    AOS.init({ duration: 1000 });
   }, []);
   return (
     <>
@@ -27,7 +27,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="homeCard grid" data-aos="fade-up">
+          <div className="homeCard grid">
             <div className="locationDiv">
               <label htmlFor="location">Location</label>
               <input type="text" placeholder="Dream  Destination" />
