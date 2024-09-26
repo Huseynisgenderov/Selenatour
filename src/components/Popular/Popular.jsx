@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./popular.scss";
 import Img2 from "../../assets/Image/doha2.jpg";
 import Img3 from "../../assets/Image/srilanka3.jpg";
@@ -7,8 +6,7 @@ import Img5 from "../../assets/Image/vietnam3.jpg";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const Data = [
   {
@@ -41,9 +39,7 @@ const Data = [
   },
 ];
 const Popular = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  }, []);
+ 
   return (
     <section className="popular section container">
       <div className="secContainer popularSec">
@@ -68,7 +64,7 @@ const Popular = () => {
         <div className="mainContent grid">
           {Data.map(({ id, imgSrc, destTitle, location, grade }) => {
             return (
-              <div className="singleDestination" id={id} data-aos="fade-up">
+              <div className="singleDestination" id={id} >
                 <div className="destImage">
                   <img src={imgSrc} alt={destTitle} />
 
