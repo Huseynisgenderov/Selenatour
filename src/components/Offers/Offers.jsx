@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./offers.scss";
 import { MdKingBed } from "react-icons/md";
 import { FaBath } from "react-icons/fa";
@@ -14,6 +15,8 @@ import img6 from "../../assets/Image/thailand2.jpg";
 import img7 from "../../assets/Image/vietnam3.jpg";
 import img8 from "../../assets/Image/misir1.jpg";
 import img9 from "../../assets/Image/doha1.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Offer = [
   {
@@ -91,6 +94,9 @@ const Offer = [
 ];
 
 const Offers = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <section className="offer container">
       <div className="secContainer">
@@ -100,53 +106,53 @@ const Offers = () => {
         </div>
 
         <div className="mainContent grid">
-          {Offer.map(({id, postImg, location, title, price, discaunt}) =>{
-            return(
-              <div className="singleOffer" id={id}>
-            <div className="destImage">
-              <img src={postImg} alt={title} />
-              <span className="discount">{discaunt}</span>
-            </div>
+          {Offer.map(({ id, postImg, location, title, price, discaunt }) => {
+            return (
+              <div className="singleOffer" id={id} data-aos="zoom-in">
+                <div className="destImage">
+                  <img src={postImg} alt={title} />
+                  <span className="discount">{discaunt}</span>
+                </div>
 
-            <div className="offerBody">
-              <div className="price flex">
-                <h4>{price}</h4>
-                <span className="status">{title}</span>
+                <div className="offerBody">
+                  <div className="price flex">
+                    <h4>{price}</h4>
+                    <span className="status">{title}</span>
+                  </div>
+
+                  <div className="amenities flex">
+                    <div className="singleAmenity flex">
+                      <MdKingBed className="icon" />
+                      <small>2 beds</small>
+                    </div>
+
+                    <div className="singleAmenity flex">
+                      <FaBath className="icon" />
+                      <small>1 bath</small>
+                    </div>
+
+                    <div className="singleAmenity flex">
+                      <FaWifi className="icon" />
+                      <small>Wi-fi</small>
+                    </div>
+
+                    <div className="singleAmenity flex">
+                      <FaShuttleVan className="icon" />
+                      <small>Shuttle</small>
+                    </div>
+                  </div>
+                  <div className="location flex">
+                    <IoLocationSharp className="icon" />
+                    <small>{location}</small>
+                  </div>
+
+                  <button className="btn flex">
+                    View Detail
+                    <BsArrowRightShort className="icon" />
+                  </button>
+                </div>
               </div>
-
-              <div className="amenities flex">
-                <div className="singleAmenity flex">
-                  <MdKingBed className="icon" />
-                  <small>2 beds</small>
-                </div>
-
-                <div className="singleAmenity flex">
-                  <FaBath className="icon" />
-                  <small>1 bath</small>
-                </div>
-
-                <div className="singleAmenity flex">
-                  <FaWifi className="icon" />
-                  <small>Wi-fi</small>
-                </div>
-
-                <div className="singleAmenity flex">
-                  <FaShuttleVan className="icon" />
-                  <small>Shuttle</small>
-                </div>
-              </div>
-              <div className="location flex">
-                <IoLocationSharp className="icon" />
-                <small>{location}</small>
-              </div>
-
-              <button className="btn flex">
-                View Detail
-                <BsArrowRightShort className="icon" />
-              </button>
-            </div>
-          </div>
-            )
+            );
           })}
         </div>
       </div>

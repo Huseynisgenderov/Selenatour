@@ -1,16 +1,21 @@
+import { useEffect } from "react";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Blog from "../../components/Blog/Blog";
 import Offers from "../../components/Offers/Offers";
 import Popular from "../../components/Popular/Popular";
 import "./home.scss";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
       <section className="home">
         <div className="secContainer container">
-          <div className="homeText">
+          <div className="homeText" data-aos="zoom-in">
             <h1 className="title">Plan Your Travel with Selenatour</h1>
 
             <p className="subTitle">
@@ -22,7 +27,7 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="homeCard grid">
+          <div className="homeCard grid" data-aos="fade-up">
             <div className="locationDiv">
               <label htmlFor="location">Location</label>
               <input type="text" placeholder="Dream  Destination" />
@@ -43,11 +48,10 @@ const Home = () => {
         </div>
       </section>
 
-      <Popular/>
-      <Offers/>
-      <AboutUs/>
-      <Blog/>
-
+      <Popular />
+      <Offers />
+      <AboutUs />
+      <Blog />
     </>
   );
 };

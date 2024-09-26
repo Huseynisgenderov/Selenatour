@@ -1,31 +1,37 @@
+import { useEffect } from "react";
 import "./aboutUs.scss";
 import { MdSupportAgent } from "react-icons/md";
 import { FaHotel } from "react-icons/fa6";
 import { FaHandshake } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import video from "../../assets/video/213422.mp4";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutUs = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <section className="about section">
       <div className="secContainer">
         <h3 className="title">Why Selena Tour?</h3>
         <div className="mainContent container grid">
-          <div className="singleItem">
+          <div className="singleItem" data-aos="zoom-in-left">
             <MdSupportAgent className="icon" />
 
             <h3>7/24 Support</h3>
 
             <p>You can contact with us anytime you want</p>
           </div>
-          <div className="singleItem">
+          <div className="singleItem" data-aos="zoom-in-right">
             <FaHotel className="icon" />
 
             <h3>200k+ Hotels</h3>
 
             <p>You can choose any hotel you want in the world</p>
           </div>
-          <div className="singleItem">
+          <div className="singleItem" data-aos="zoom-in-left">
             <FaHandshake className="icon" />
 
             <h3>100+ Corpate company</h3>
@@ -35,7 +41,7 @@ const AboutUs = () => {
               everyday{" "}
             </p>
           </div>
-          <div className="singleItem">
+          <div className="singleItem" data-aos="zoom-in-right">
             <FaPeopleGroup className="icon" />
 
             <h3>4000+ Custumer</h3>
@@ -59,7 +65,7 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="cardVideo">
+            <div className="cardVideo" data-aos="zoom-in">
               <video src={video} autoPlay loop muted typeof="video/mp4"></video>
             </div>
           </div>

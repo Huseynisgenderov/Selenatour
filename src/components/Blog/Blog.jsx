@@ -1,10 +1,12 @@
-import React from "react";
+import { useEffect } from "react";
 import "./blog.scss";
 import img1 from "../../assets/Image/vietnamtur.jpeg";
 import img2 from "../../assets/Image/vietnamtur2.jpeg";
 import img3 from "../../assets/Image/vietnamtur3.jpeg";
 import img4 from "../../assets/Image/vietnamtur4.jpeg";
 import img5 from "../../assets/Image/vietnamtur5.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Posts = [
   {
@@ -40,20 +42,22 @@ const Posts = [
 ];
 
 const Blog = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <section className="blog container section">
       <div className="secContainer">
         <div className="secIntro">
           <h2 className="secTitle">Our Best Blog?</h2>
-          <p>
-            We have best memories with our group members😍
-          </p>
+          <p>We have best memories with our group members😍</p>
         </div>
 
         <div className="mainContainer grid">
           {Posts.map(({ id, postImg, title, desc }) => {
             return (
-              <div className="singlePost grid" id={id}>
+              <div className="singlePost grid" id={id} data-aos="fade-up">
                 <div className="imgDiv">
                   <img src={postImg} alt={title} />
                 </div>
