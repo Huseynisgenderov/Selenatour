@@ -2,10 +2,7 @@ import React from "react";
 import "./footer.scss";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
 
 const Footer = () => {
   return (
@@ -25,27 +22,6 @@ const Footer = () => {
             <a href="https://www.instagram.com/selenatour_baku/">
               <FaInstagram className="icon" />
             </a>
-            <div>
-              <Popup trigger={<FaWhatsapp className="icon" />} modal nested>
-                {(close) => (
-                  <div className="modal">
-                    <div className="content">Yaza biləcəyin kontaktlar</div>
-                    <div className="singleModal">
-                      <a className="link" href="https://wa.me/+994774171015">Hüseyn İsgəndərov <br /> (Tur, bilet, viza desdeyi)</a>
-                    </div>
-                    <div className="singleModal">
-                      <a className="link" href="https://wa.me/+994515111015">Gülya Məmmədova <br /> (Tur, bilet, viza desdeyi)</a>
-                    </div>
-                    <div className="singleModal">
-                      <a className="link" href="https://wa.me/+994774751015">Pəri Yusufova <br /> (Tur, bilet)</a>
-                    </div>
-                    <div>
-                      <button className="btn" onClick={() => close()}>Bağla</button>
-                    </div>
-                  </div>
-                )}
-              </Popup>
-            </div>
             <a href="https://www.tiktok.com/@selenatour_baku">
               <FaTiktok className="icon" />
             </a>

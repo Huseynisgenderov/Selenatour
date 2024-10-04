@@ -3,9 +3,12 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Blog from "../../components/Blog/Blog";
 import Offers from "../../components/Offers/Offers";
 import Popular from "../../components/Popular/Popular";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 import "./home.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Home = () => {
   useEffect(() => {
@@ -47,6 +50,36 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className="whatsapp">
+        <Popup trigger={<FaWhatsapp className="icon" />} modal nested>
+          {(close) => (
+            <div className="modal">
+              <div className="content">Yaza biləcəyin kontaktlar</div>
+              <div className="singleModal">
+                <a className="link" href="https://wa.me/+994774171015">
+                  Hüseyn İsgəndərov <br /> (Tur, bilet, viza desdeyi)
+                </a>
+              </div>
+              <div className="singleModal">
+                <a className="link" href="https://wa.me/+994515111015">
+                  Gülya Məmmədova <br /> (Tur, bilet, viza desdeyi)
+                </a>
+              </div>
+              <div className="singleModal">
+                <a className="link" href="https://wa.me/+994774751015">
+                  Pəri Yusufova <br /> (Tur, bilet)
+                </a>
+              </div>
+              <div>
+                <button className="btn" onClick={() => close()}>
+                  Bağla
+                </button>
+              </div>
+            </div>
+          )}
+        </Popup>
+      </div>
 
       <Popular />
       <Offers />
