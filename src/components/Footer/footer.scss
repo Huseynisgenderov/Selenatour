@@ -79,6 +79,35 @@
   }
 }
 
+.popup-content{
+border-radius: 20px;
+  .modal{
+    padding: 15px;
+    text-align: center;
+
+    .link{
+      color: var(--blackColor);
+      &:hover{
+        color: var(--PrimaryColor);
+      }
+    }
+    .content{
+      margin-bottom: 20px;
+    }
+
+    .singleModal{
+      margin-bottom: 10px;
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+
+    .btn{
+      margin-top: 20px;
+    }
+  }
+} 
+
 @media screen and (min-width: 448px) {
   .footer {
     .secContainer {

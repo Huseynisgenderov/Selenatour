@@ -13,7 +13,7 @@ const AboutUs = () => {
       <div className="secContainer">
         <h3 className="title">Why Selena Tour?</h3>
         <div className="mainContent container grid">
-          <div className="singleItem" data-aos="zoom-in-left">
+          <div className="singleItem">
             <MdSupportAgent className="icon" />
 
             <h3>7/24 Support</h3>
