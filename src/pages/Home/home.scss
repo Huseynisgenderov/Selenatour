@@ -125,6 +125,7 @@
 }
 .popup-content {
   border-radius: 20px;
+  width: 70%;
   .modal {
     padding: 15px;
     text-align: center;
@@ -218,5 +219,8 @@
         width: 77%;
       }
     }
+  }
+  .popup-content{
+    width: 50% !important;
   }
 }
