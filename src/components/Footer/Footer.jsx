@@ -25,7 +25,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/selenatour_baku/">
               <FaInstagram className="icon" />
             </a>
-            <a>
+            <div>
               <Popup trigger={<FaWhatsapp className="icon" />} modal nested>
                 {(close) => (
                   <div className="modal">
@@ -45,7 +45,7 @@ const Footer = () => {
                   </div>
                 )}
               </Popup>
-            </a>
+            </div>
             <a href="https://www.tiktok.com/@selenatour_baku">
               <FaTiktok className="icon" />
             </a>
